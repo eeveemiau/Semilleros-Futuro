@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Aquí puedes escanear cualquier planta</h1>
+        <a class="navegar" href="./index.html">Volver</a>
+    </header>
+    <br>
+    <div class="container">
+       <p>Sube o toma una foto de la planta que deseas identificar</p>
+
+       <div class="upload-area" onclick="document.getElementById('inputFoto').click()">
+         <p id="labelSubir">Haz clic aquí para elegir o tomar una foto</p>
+         <input type="file" id="inputFoto" accept="image/*" capture="environment">
+         <img id="preview" alt="Vista previa de la planta">
+       </div>
+
+       <button id="btnEscanear" class="btn" disabled>Identificar Planta</button>
+       <div id="loading" class="loading" style="display: none;">Consultando con la IA de plantas...</div>
+       <div id="resultado"></div>
+    </div>
+
+    
+    <script src="../js/archivo.js"></script>
+</body>
+</html>

@@ -8,6 +8,7 @@
     --verdeAmarillento: #e7f590;
     --verdeazulado: #b0bea9;
     --naranjaApagado: #a5785e;
+    --carta:#ffffff;
 }
 /* Fin de colores */
 
@@ -79,6 +80,24 @@ main {
 .izquierda {
     text-align: left;
 }
+
+.container {
+    background-color: var(--carta);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 480px;
+    padding: 24px;
+    text-align: center;
+}
+
+.subir-area {
+      border: 2px dashed #a5d6a7;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #e8f5e9;
+      cursor: pointer;
+    }
 /* Fin de clases */
 
 /* Inicio de ids */
