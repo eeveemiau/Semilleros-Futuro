@@ -23,6 +23,19 @@ inputFoto.addEventListener("change", (e) => {
     }
 });
 
+// Redimensiona la imagen antes de enviarla al servidor
+async function redimensionar(archivo, maxLado = 1600, calidad = 0.85) {
+    const bitmap = await createImageBitmap(archivo);
+    const escala = Math.min(1, maxLado / Math.max(bitmap.width, bitmap.height));
+
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(bitmap.width * escala);
+    canvas.height = Math.round(bitmap.height * escala);
+    canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+    return new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", calidad));
+}
+
 // Identificar la planta
 btnEscanear.addEventListener("click", async () => {
     const archivo = inputFoto.files[0];
@@ -35,7 +48,8 @@ btnEscanear.addEventListener("click", async () => {
 
     const formData = new FormData();
 
-    formData.append("images", archivo);
+    const fotoLista = await redimensionar(archivo);
+    formData.append("images", fotoLista, "foto.jpg");
     formData.append("organs", "auto");
 
     try {

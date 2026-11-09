@@ -6,7 +6,7 @@ const plantas = [
 
 function generarListaHTML (items) {
     const filas = items
-    .map((item) => `<li>${item.nombre} - &&{item.ubicacion}</li>`)
+    .map((item) => `<li>${item.nombre} - &{item.ubicacion}</li>`)
     .join("");
 
     return `

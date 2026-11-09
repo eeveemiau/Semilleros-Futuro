@@ -10,17 +10,6 @@ if (!process.env.PLANTNET_API_KEY) {
     console.log("API Key cargada correctamente");
 }
 
-const upload = multer({
-    storage: multer.memoryStorage(),
-    fileFilter: (req, file, cb) => {
-        if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
-            cb(null, true);
-        } else {
-            cb(new Error("Solo se permiten imágenes JPG o PNG"));
-        }
-    }
-});
-
 const app = express();
 
 const PORT = 3000;
@@ -73,6 +62,19 @@ app.post("/api/identificar", upload.single("images"), async (req, res) => {
     }
 });
 
+// Configuración de Multer para manejar la subida de imágenes
+const upload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB
+    fileFilter: (req, file, cb) => {
+        if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
+            cb(null, true);
+        } else {
+            cb(new Error("Solo se permiten imágenes JPG o PNG"));
+        }
+    }
+});
+
 // Servir los archivos de frontend
 app.use(express.static(path.join(__dirname, "frontend")));
 
@@ -98,7 +100,11 @@ app.get("/identificar.html", (req, res) => {
     res.sendFile(path.join(__dirname, "frontend", "html", "identificar.html"));
 });
 
-// Iniciar servidor
+app.use((err, req, res, next) => {
+    res.status(400).json({ error: err.message });
+});
+
+// Iniciar servidor con node server.js
 app.listen(PORT, () => {
     console.log(`Servidor funcionando en http://localhost:${PORT}`);
 });
