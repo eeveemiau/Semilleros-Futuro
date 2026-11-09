@@ -5,19 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identificar</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Comic+Relief:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+
+<script src="../js/efectoTexto.js" defer></script>
 </head>
-<body>
+<body class="fondo-bombon">
 
     <header>
-        <h1 class="titulo">Aquí puedes escanear cualquier planta</h1>
-        <a class="navegar" href="./index.html">Volver</a>
+        <h1 id="titulo" class="texto-luz">Escaner de plantas</h1>
+        <nav class="navegacion">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburguesa">
+                <img src="../assets/img/florLoto.svg" alt="Abrir menú" width="40" height="40">
+            </label>
+            <div class="enlaces">
+            <a class="navegar" href="./index.html">Inicio</a>
+            <a class="navegar" href="./contactanos.html">Contactanos</a>
+            <a class="navegar" href="./equipo.html">Nosotros</a>
+            <a class="navegar" href="./biblioteca.html">Biblioteca</a>    
+            <a class="navegar" href="./mapa.html">Mapa</a>
+            </div>
+        </nav>
     </header>
 
     <br>
     
+    <main class="centro">
+
+        <section id="identificar" class="carta">
+            <h1 id="tema2" class="texto-luz">Captura, conoce y guarda. <br> Lanzate de lleno en la piscina del conocimiento</h1>
+        </section>
+
+        <br>
+        <br>
+
     <div class="container">
        <p>Sube o toma una foto de la planta que deseas identificar</p>
 
@@ -31,8 +55,16 @@
        <div id="loading" class="loading" style="display: none;">Consultando en la enciclopedia...</div>
        <div id="resultado"></div>
     </div>
+    </main>
 
-    
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2026 Semilleros del futuro. Todos los derechos reservados. <section class="oculto">BY: Miguel Vélez</section></p>
+    </footer>
+
     <script src="../js/archivo.js"></script>
 </body>
 </html>

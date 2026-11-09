@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Comic+Relief:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+
+<script src="../js/efectoTexto.js" defer></script>
 </head>
-<body>
+<body class="fondo-noche">
     <header>
-        <h1 class="titulo">Conoce a nuestro equipo</h1>
-        <a class="navegar" href="./index.html">Volver</a>
+        <h1 id="titulo" class="texto-luz">Nosotros</h1>
+        <nav class="navegacion">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburguesa">
+                <img src="../assets/img/florLoto.svg" alt="Abrir menú" width="40" height="40">
+            </label>
+            <div class="enlaces">
+            <a class="navegar" href="./index.html">Inicio</a>
+            <a class= "navegar" href="./contactanos.html">Contactanos</a>
+            <a class="navegar" href="./identificar.html">Identificar</a>
+            <a class="navegar" href="./biblioteca.html">Biblioteca</a>    
+            <a class="navegar" href="./mapa.html">Mapa</a>
+            </div>
+        </nav>
     </header>
     <nav>
         <div class="menu">

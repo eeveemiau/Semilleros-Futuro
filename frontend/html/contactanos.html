@@ -3,27 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sdf - Contacto</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Comic+Relief:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+
+<script src="../js/efectoTexto.js" defer></script>
+<script src="../js/formulario.js" defer></script>
 </head>
-<body class="izquierda">
+
+<body class="izquierda fondo-amarilla">
     <header id="centro">
-        <h1 class="titulo" strong>Contactanos</h1>
-        <a class="navegar" href="./index.html">Volver</a>
+        <h1 id="titulo" class="texto-luz">Contactanos</h1>
+        <nav class="navegacion">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburguesa">
+                <img src="../assets/img/florLoto.svg" alt="Abrir menú" width="40" height="40">
+            </label>
+            <div class="enlaces">
+            <a class= "navegar" href="./index.html">Inicio</a>
+            <a class="navegar" href="./equipo.html">Nosotros</a>
+            <a class="navegar" href="./identificar.html">Identificar</a>
+            <a class="navegar" href="./biblioteca.html">Biblioteca</a>    
+            <a class="navegar" href="./mapa.html">Mapa</a>
+            </div>
+        </nav>
     </header>
     <br>
     <main>
-        <strong>Telefono:</strong>
+        <article id="contactos" class="carta">
+        <h2 id="tema3" class="texto-luz">¿Tienes alguna duda o sugerencia?</h2>
+        <p id="par" class="texto-luz">Si tienes alguna pregunta, inquietud o sugerencia, no dudes en contactarnos. Estamos aquí para ayudarte y escuchar tus comentarios. Puedes comunicarte con nosotros a través de los siguientes medios:</p>
+        </article>
+
         <br>
-        <a href="tel:+573045515962">3045515962</a>
         <br>
-        <br>
-        <strong>Correo:</strong>
-        <br>
-        <a href="mailto:semilleros.del.futuro03@gmail.com">semilleros.del.futuro03@gmail.com</a>
+
+        <section class="colum2">
+            <article class="">
+            <button id="copyG" type="button" class="boton">
+            <span class="titulo">Correo</span>
+            semilleros.del.futuro03@gmail.com
+            </button>
+            </article>
+
+            <form class="box" id="treslineas" novalidate>
+                <label for="name">Nombre:</label>
+                <br>
+                <input type="text" id="name" name="name" required>
+                <span class="error-mensaje" id="errorName"></span>
+
+                <br>
+                <br>
+
+                <label for="email">Correo:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                <span class="error-mensaje" id="errorEmail"></span>
+
+                <br>
+                <br>
+
+                <label for="message">Mensaje:</label>
+                <br>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error-mensaje" id="errorMessage"></span>
+
+                <span class="exito-mensaje" id="mensajeExito"></span>
+
+                <button type="submit" class="boton">Enviar</button>
+            </form>
+
+            <article class="">
+            <button id="copyT" class="boton">
+            <span class="titulo">Teléfono</span>
+            +57 304 5515962          
+            </button>
+            </article>
+
+            <article class="">
+            <button id="copyU" class="boton">
+            <span class="titulo">Ubicación</spam>
+            Medellín, Antioquia, Colombia         
+            </button>
+            </article>
+        </section>
     </main>
+
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2026 Semilleros del futuro. Todos los derechos reservados. <section class="oculto">BY: Miguel Vélez</section></p>
+    </footer>
 </body>
 </html>

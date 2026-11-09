@@ -4,36 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semilleros del futuro</title>
-    <script src="../js/calculos.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Comic+Relief:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+
+    <script src="../js/calculos.js"></script>
+    <script src="../js/efectoTexto.js" defer></script>
 
 </head>
-<body>
+<body class="fondo-roja">
     <header id="he">
         <section class="titu"><h1>
-        <span id="tPrincipal">Semilleros</span> 
-        <span id="tSegundario">del futuro</span></h1>
+        <span id="tPrincipal" class="texto-luz">Semilleros</span> 
+        <span id="tSegundario" class="texto-luz">del futuro</span></h1>
         </section>
-        <section class="navegacion">
-        <a class= "navegar" href="./contactanos.html">Contactanos</a>
-        <a class="navegar" href="./equipo.html">Nosotros</a>
-        <a class="navegar" href="./identificar.html">Identificar</a>
-        <a class="navegar" href="./biblioteca.html">Biblioteca</a>    
-        <a class="navegar" href="./mapa.html">Mapa</a>
-        </section>
+        <nav class="navegacion">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburguesa">
+                <img src="../assets/img/florLoto.svg" alt="Abrir menú" width="40" height="40">
+            </label>
+            <div class="enlaces">
+            <a class= "navegar" href="./contactanos.html">Contactanos</a>
+            <a class="navegar" href="./equipo.html">Nosotros</a>
+            <a class="navegar" href="./identificar.html">Identificar</a>
+            <a class="navegar" href="./biblioteca.html">Biblioteca</a>    
+            <a class="navegar" href="./mapa.html">Mapa</a>
+            </div>
+        </nav>
     </header>
     <main>
-        <h1 class="Tema">¿Nunca te has preguntado qué esconde toda la vida de este mundo? La respuesta podría encontrarse en forma vegetal. Adéntrate en un mundo lleno de conocimiento extraído desde la raíz.</h1>
-        <div class = "Contenedor">
-            <article class = "Columna">
-                <h2 class="subtitulo">Bienvenidos a nuestro sitio web</h2>
-                <p>Este sitio está diseñado para los curiosos por la flora, </p>
-                <img src="../assets/img/florrosa.jpg" alt="Imagen de una flor rosa" width="200" height="200">
+        <section class="carta">
+            <h1 id="tema" class="texto-luz">¿Nunca te has preguntado qué secretos esconde la vida de este mundo? La respuesta podría encontrarse en forma vegetal. Adéntrate en un mundo lleno de conocimiento extraído desde la raíz.</h1>
+        </section>
+
+        <br>
+        <br>
+        <br>
+
+        <section class="barra">
+            <h1 id="nov" class="texto-luz">Novedades</h1>
+        </section>
+
+        <br>
+        <br>
+
+        <div class = "contenedor">
+
+            <article class = "columna">
+                <h2 class="titulo">Guarda tu recorrido.</h2>
+
+                <section class="contenido">
+                <p>Conocemos que tu camino es largo, y debe ser reconocido. Por eso creamos la Biblioteca, un lugar donde podrás guardar cada momento importante y alardear frente a otros usuarios.
+
+                <br>
+
+                Podrás ver tu progreso y el de otros, y así crear una comunidad de Sentrys que comparten su amor por la naturaleza.
+                </p>
+                </section>
+
+                <section class="footer">
+                <a href="./biblioteca.html" class="parrafo">Explorala -></a>
+                </section>
             </article>
+
+            <article class = "columna">
+                <h2 class="titulo">¡Conoce tú flora!</h2>
+
+                <section class="contenido">
+                <p>Nos adaptamos a tus peticiones y ahora podrás identificar plantas en nuestro sitio web.
+
+                <br>
+
+                Esta herramienta permite conocer más sobre la flora que te rodea, dejando un registro en el apartado de biblioteca.
+                </p>
+                </section>
+
+                <section class="footer">
+                <a href="./identificar.html" class="parrafo">Pruebalo ahora -></a>
+                </section>
+            </article>
+
+            <article class = "columna">
+                <h2 class="titulo">Tu propio GPS.</h2>
+
+                <section class="contenido">
+                <p>Podrás caminar sin miedo a perderte. El mapa se ha actualizado y ahora cuenta con tu ubicación, no solo para rastrearte *guiño, guiño*
+
+                    <br>
+
+                Conoce la flora que te rodea, encuentra los lugares más interesantes para visitar y actualiza el estado de cada planta, todo desde la comodidad de tu celular.
+                </p>
+                </section>
+
+                <section class="footer">
+                <a href="./mapa.html" class="parrafo">Empieza tu aventura -></a>
+                </section>
+            </article>
+
         </div>
     </main>
+
+    <footer>
+        <p>© 2026 Semilleros del futuro. Todos los derechos reservados. <section class="oculto">BY: Miguel Vélez</section></p>
+    </footer>
 </body>
 </html>
